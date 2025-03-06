@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Pregunta...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay muted loop id="bg-video">
+            <source src="fondo.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <h1>Queralt, ¿quieres ser mi pareja?</h1>
+        <div class="buttons">
+            <button id="yes">Sí ❤️</button>
+            <button id="no">Ni de coña ❌</button>
+            <button id="think">Tengo que pensarlo 🤔</button>
+        </div>
+        <p id="countdown" style="display:none;"></p>
+        <p id="message"></p>
+        <div id="envelope" class="envelope">
+            <img src="sobre.png" alt="Sobre" id="envelope-img">
+        </div>
+        <div id="image-container" class="image-container">
+            <p id="photo-text" class="photo-text">ale, encorreada x fin!😯 Te quiero mucho Alpaca❤️</p>
+            <img src="foto.PNG" alt="Imagen" id="hidden-image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
