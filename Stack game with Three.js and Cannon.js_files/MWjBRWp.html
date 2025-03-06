@@ -180,8 +180,8 @@ a:visited {
   <div class="content">
     <p>💀Perdiste el juego💀</p>
     <p>Para volver a jugar, presiona R</p>
-    <p>To GAY Surprise press Q</p>
     <button id="restartBtn">JUGAR</button>
+    <p>Presiona Q si eres GAY</p>
   </div>
 </div>
   
@@ -232,9 +232,7 @@ a:visited {
   document.getElementById("restartBtn").addEventListener("click", function() {
     location.reload();
   });
-</script>
-  
-<script>
+
   document.addEventListener("keydown", function(event) {
     if (event.key.toLowerCase() === "q") {
       window.location.href = "queralt.html";
