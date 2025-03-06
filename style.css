@@ -1,0 +1,177 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    color: #000000;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#yes {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#no {
+    background-color: #f44336;
+    color: white;
+    position: relative;
+}
+
+#think {
+    background-color: #ff9800;
+    color: white;
+}
+
+#message {
+    font-size: 22px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#countdown {
+    font-size: 30px;
+    color: #f44336;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.envelope {
+    display: none;
+    margin-top: 30px;
+    position: relative;
+    animation: appear 1s ease-out forwards;
+}
+
+.envelope img {
+    width: 100px;
+    cursor: pointer;
+}
+
+.image-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#hidden-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain; 
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#photo-text {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    display: none;  /* Inicialmente oculto */
+    white-space: nowrap; /* Asegura que el texto no se divida */
+    text-align: center;
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Permite que el texto se ajuste si es necesario */
+}
+
+#envelope {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#envelope.appear {
+    display: block;
+    opacity: 1;
+}
+
+
+.floating-word {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    animation: floatEffect 10s infinite linear;
+    pointer-events: none; /* No debe interferir con otros elementos */
+    user-select: none; /* No permite seleccionar el texto */
+    z-index: 9999; /* Para asegurarnos de que estén encima de la imagen */
+}
+
+@keyframes floatEffect {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--random-x), var(--random-y)); /* Movimiento aleatorio */
+    }
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
