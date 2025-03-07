@@ -152,26 +152,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Agregar estilos para el botón
     const style = document.createElement("style");
     style.innerHTML = `
-        .terms-container {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-        }
-    
-        style.innerHTML = `
-        .terms-btn {
-            font-size: 10px !important;
-            color: white !important;
-            text-decoration: underline !important;
-            background: none !important;
-            border: none !important;
-            cursor: pointer !important;
-            padding: 0 !important;
-        }
-    `;
-    document.head.appendChild(style);
+    .terms-container {
+        position: fixed !important;
+        bottom: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 9999 !important;
+    }
+
+    .terms-btn {
+        font-size: 14px !important;
+        color: white !important;
+        text-decoration: underline !important;
+        background: none !important;
+        border: none !important;
+        cursor: pointer !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .terms-btn:hover {
+        text-decoration: none !important;
+    }
+`;
+document.head.appendChild(style);
+
 
 
 
