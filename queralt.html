@@ -8,17 +8,22 @@
     <style>
         .terms-btn {
             display: block;
-            margin: 10px auto;
-            padding: 5px 10px;
-            font-size: 12px;
+            margin: 20px auto;
+            padding: 8px 15px;
+            font-size: 14px;
             background-color: #555;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            text-align: center;
         }
         .terms-btn:hover {
             background-color: #777;
+        }
+        .terms-container {
+            text-align: center;
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -44,8 +49,12 @@
         <div id="image-container" class="image-container">
             <p id="photo-text" class="photo-text">ale, encorreada x fin!😯 Te quiero mucho Alpaca❤️</p>
             <img src="foto.PNG" alt="Imagen" id="hidden-image">
-            <button class="terms-btn" onclick="goToTerms()">Términos y Condiciones</button>
         </div>
+    </div>
+
+    <!-- Botón de Términos y Condiciones al final de la web -->
+    <div class="terms-container">
+        <button class="terms-btn" onclick="goToTerms()">Términos y Condiciones</button>
     </div>
 
     <script>
