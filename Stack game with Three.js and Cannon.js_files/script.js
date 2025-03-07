@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // Cuando llegue al final de los 5 segundos reales (equivalentes a 60 segundos en el contador acelerado)
             if (acceleratedTime >= 50) {
                 clearInterval(countdownTimer);
-                message.innerHTML = "suficiente tiempo... ns pa k si yo se que es un Sí 😴";
+                message.innerHTML = "Ups... tuviste mucho tiempo, eso es un Sí 😴";
                 message.style.color = "#000000	";
             }
         }, 100); // Acelera cada 100ms
 
         // Después de 5 segundos reales, mostrar el mensaje final
         setTimeout(() => {
-            message.innerHTML = "suficiente tiempo... ns pa k si yo se que es un Sí 😴";
+            message.innerHTML = "¡Ups... tuviste mucho tiempo, eso es un Sí 😴";
             message.style.color = "#000000	";
             countdownElement.style.display = "none"; // Ocultar el contador
         }, 5000); // 5 segundos reales
@@ -136,54 +136,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updatePosition();
     }
-
-    // Crear el botón de Términos y Condiciones dinámicamente
-    const termsContainer = document.createElement("div");
-    termsContainer.classList.add("terms-container");
-    
-    const termsButton = document.createElement("button");
-    termsButton.classList.add("terms-btn");
-    termsButton.innerText = "Términos y Condiciones";
-    termsButton.addEventListener("click", goToTerms); // Evento para redirigir
-    
-    termsContainer.appendChild(termsButton);
-    document.body.appendChild(termsContainer);
-    
-      // Agregar estilos para el botón
-        const style = document.createElement("style");
-        style.innerHTML = `
-           style.innerHTML = `
-            .terms-container {
-                position: fixed;
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 9999;
-                background-color: rgba(255, 255, 255, 0.8);
-                padding: 10px;
-                border-radius: 8px;
-            }
-        
-            .terms-btn {
-                padding: 8px 15px;
-                font-size: 14px;
-                background-color: #222;
-                color: white;
-                text-decoration: underline;
-                background: none;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                text-align: center;
-                transition: background 0.3s;
-            }
-        
-            .terms-btn:hover {
-                background-color: #444;
-                text-decoration: none;
-            }
-        `;
-        document.head.appendChild(style);
-    
-    
-    });
+});
