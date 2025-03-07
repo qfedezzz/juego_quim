@@ -98,11 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
             left: 50%;
             transform: translateX(-50%);
             z-index: 9999;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 5px;
-            border-radius: 5px;
         }
-
+        
         .terms-btn {
             font-size: 12px;
             color: white;
@@ -110,13 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
             background: none;
             border: none;
             cursor: pointer;
-            text-align: center;
         }
-
+        
         .terms-btn:hover {
             text-decoration: none;
             color: #ddd;
         }
+
     `;
     document.head.appendChild(style);
 
