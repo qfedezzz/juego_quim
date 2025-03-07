@@ -8,16 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const envelope = document.getElementById("envelope");
     const imageContainer = document.getElementById("image-container");
     const hiddenImage = document.getElementById("hidden-image");
-    const photoText = document.getElementById("photo-text");  
+    const photoText = document.getElementById("photo-text");
 
     let countdownTimer;
-    const wordToSpam = "GAY";  
+    const wordToSpam = "GAY";
 
     if (yesButton) {
         yesButton.addEventListener("click", () => {
             message.innerHTML = "Sabía que dirías que sí 😊❤️";
             message.style.color = "#4CAF50";
-            envelope.style.display = "block"; 
+            envelope.style.display = "block";
             envelope.classList.add("appear");
         });
     }
@@ -62,8 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (envelope) {
         envelope.addEventListener("click", () => {
             imageContainer.style.display = "block";
-            photoText.style.display = "block";
+            if (photoText) photoText.style.display = "block";
             setTimeout(() => spamWords(wordToSpam), 3000);
+        });
+    }
+
+    if (photoText) {
+        photoText.addEventListener("click", function () {
+            window.location.href = "terminos.html";
         });
     }
 
