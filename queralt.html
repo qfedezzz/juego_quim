@@ -6,19 +6,22 @@
     <title>Una Pregunta...</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Botón de Términos y Condiciones */
+        /* Estilos del botón de Términos y Condiciones */
         .terms-container {
-            position: fixed;  /* Se mantiene al fondo de la pantalla */
-            bottom: 20px;  /* Separado del borde */
+            position: fixed;  /* Fijar en la pantalla */
+            bottom: 10px;  /* Mantener al fondo */
             left: 50%;
             transform: translateX(-50%); /* Centrar horizontalmente */
-            text-align: center;
-            z-index: 1000;  /* Asegurar que esté por encima de otros elementos */
+            z-index: 9999;  /* Asegurar que esté por encima de todo */
+            background-color: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente */
+            padding: 10px;
+            border-radius: 8px;
         }
+
         .terms-btn {
-            padding: 10px 20px;
+            padding: 8px 15px;
             font-size: 14px;
-            background-color: #333;
+            background-color: #222;
             color: white;
             border: none;
             border-radius: 5px;
@@ -26,8 +29,9 @@
             text-align: center;
             transition: background 0.3s;
         }
+
         .terms-btn:hover {
-            background-color: #555;
+            background-color: #444;
         }
     </style>
 </head>
