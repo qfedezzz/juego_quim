@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una Pregunta...</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .terms-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .terms-btn:hover {
+            background-color: #777;
+        }
+    </style>
 </head>
 <body>
     <div class="background-video">
@@ -27,10 +43,15 @@
         </div>
         <div id="image-container" class="image-container">
             <p id="photo-text" class="photo-text">ale, encorreada x fin!😯 Te quiero mucho Alpaca❤️</p>
-            <img src="foto.PNG" alt="Imagen" id="hidden-image" onclick="goToTerms()">
+            <img src="foto.PNG" alt="Imagen" id="hidden-image">
+            <button class="terms-btn" onclick="goToTerms()">Términos y Condiciones</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function goToTerms() {
+            window.location.href = "terminos.html";
+        }
+    </script>
 </body>
 </html>
