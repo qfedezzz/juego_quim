@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Agregar estilos para el botón
     const style = document.createElement("style");
-       style.innerHTML = `
+    style.innerHTML = `
         .terms-container {
             position: fixed;
             bottom: 10px;
@@ -160,21 +160,19 @@ document.addEventListener("DOMContentLoaded", () => {
             z-index: 9999;
         }
     
+        style.innerHTML = `
         .terms-btn {
-            font-size: 14px;
-            color: white;
-            text-decoration: underline;
-            background: none;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-        }
-    
-        .terms-btn:hover {
-            text-decoration: none;
+            font-size: 10px !important;
+            color: white !important;
+            text-decoration: underline !important;
+            background: none !important;
+            border: none !important;
+            cursor: pointer !important;
+            padding: 0 !important;
         }
     `;
     document.head.appendChild(style);
+
 
 
 });
