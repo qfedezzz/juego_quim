@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Una Pregunta...</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos del botón de Términos y Condiciones */
+        .terms-container {
+            position: fixed;  /* Fijar en la pantalla */
+            bottom: 10px;  /* Mantener al fondo */
+            left: 50%;
+            transform: translateX(-50%); /* Centrar horizontalmente */
+            z-index: 9999;  /* Asegurar que esté por encima de todo */
+            background-color: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente */
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .terms-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .terms-btn:hover {
+            background-color: #444;
+        }
+    </style>
 </head>
 <body>
     <div class="background-video">
@@ -31,6 +60,15 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Botón de Términos y Condiciones fijo al final -->
+    <div class="terms-container">
+        <button class="terms-btn" onclick="goToTerms()">Términos y Condiciones</button>
+    </div>
+
+    <script>
+        function goToTerms() {
+            window.location.href = "terminos.html";
+        }
+    </script>
 </body>
 </html>
