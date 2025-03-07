@@ -149,28 +149,41 @@ document.addEventListener("DOMContentLoaded", () => {
     termsContainer.appendChild(termsButton);
     document.body.appendChild(termsContainer);
     
-    // Agregar estilos para el botón
-    const style = document.createElement("style");
-    style.innerHTML = `
-        .terms-container {
-            position: fixed;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-        }
-    
+      // Agregar estilos para el botón
+        const style = document.createElement("style");
         style.innerHTML = `
-        .terms-btn {
-            font-size: 10px !important;
-            color: white !important;
-            text-decoration: underline !important;
-            background: none !important;
-            border: none !important;
-            cursor: pointer !important;
-            padding: 0 !important;
-        }
-    `;
-    document.head.appendChild(style);
-
-});
+           style.innerHTML = `
+            .terms-container {
+                position: fixed;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 9999;
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 8px;
+            }
+        
+            .terms-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+                background-color: #222;
+                color: white;
+                text-decoration: underline;
+                background: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-align: center;
+                transition: background 0.3s;
+            }
+        
+            .terms-btn:hover {
+                background-color: #444;
+                text-decoration: none;
+            }
+        `;
+        document.head.appendChild(style);
+    
+    
+    });
