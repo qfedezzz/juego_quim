@@ -6,24 +6,28 @@
     <title>Una Pregunta...</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Botón de Términos y Condiciones */
+        .terms-container {
+            position: fixed;  /* Se mantiene al fondo de la pantalla */
+            bottom: 20px;  /* Separado del borde */
+            left: 50%;
+            transform: translateX(-50%); /* Centrar horizontalmente */
+            text-align: center;
+            z-index: 1000;  /* Asegurar que esté por encima de otros elementos */
+        }
         .terms-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 8px 15px;
+            padding: 10px 20px;
             font-size: 14px;
-            background-color: #555;
+            background-color: #333;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-align: center;
+            transition: background 0.3s;
         }
         .terms-btn:hover {
-            background-color: #777;
-        }
-        .terms-container {
-            text-align: center;
-            margin-top: 50px;
+            background-color: #555;
         }
     </style>
 </head>
@@ -52,7 +56,7 @@
         </div>
     </div>
 
-    <!-- Botón de Términos y Condiciones al final de la web -->
+    <!-- Botón de Términos y Condiciones fijo al final -->
     <div class="terms-container">
         <button class="terms-btn" onclick="goToTerms()">Términos y Condiciones</button>
     </div>
