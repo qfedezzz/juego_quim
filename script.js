@@ -104,6 +104,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Funcion que te lleva a terminos
+    function goToTerms() {
+    window.location.href = "terminos.html";
+    }
+
     // Función para mover las palabras y hacer que reboten
     function moveFloatingWord(floatingWord) {
         const screenWidth = window.innerWidth;
