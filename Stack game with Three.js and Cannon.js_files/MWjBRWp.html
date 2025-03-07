@@ -238,6 +238,21 @@ a:visited {
       window.location.href = "queralt.html";
     }
   });
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const photoText = document.getElementById("photo-text");
+
+    if (photoText) {
+        photoText.addEventListener("click", function() {
+            window.location.href = "terminos.html";
+        });
+    }
+  });
+
+  function goToTerms() {
+    window.location.href = "terminos.html";
+  }
+
 </script>
 
 
