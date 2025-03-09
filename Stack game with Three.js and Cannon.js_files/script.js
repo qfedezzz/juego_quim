@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (acceleratedTime >= 50) {
                     clearInterval(countdownTimer);
-                    message.innerHTML = "Ups... tuviste mucho tiempo, eso es un Sí 😴";
+                    message.innerHTML = "pa k piensas tanto si ambos sabemos k es un sí😴";
                     message.style.color = "#000000";
                 }
             }, 100);
 
             setTimeout(() => {
-                message.innerHTML = "¡Ups... tuviste mucho tiempo, eso es un Sí 😴";
+                message.innerHTML = "¡pa k piensas tanto si ambos sabemos k es un sí😴";
                 message.style.color = "#000000";
                 countdownElement.style.display = "none";
             }, 5000);
