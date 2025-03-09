@@ -77,6 +77,81 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "terminos.html";
     }
 
+    // -----------------------------------------------------------------------------------------
+     // Este es el evento para mostrar la imagen y el texto al hacer clic en el sobre
+    envelope.addEventListener("click", () => {
+        imageContainer.style.display = "block";  // Mostrar la imagen al hacer clic en el sobre
+        photoText.style.display = "block";  // Mostrar el texto
+
+        // Iniciar el spameo de palabras después de 3 segundos
+        setTimeout(() => {
+            spamWords(wordToSpam);  // Llamar a la función para spampear la palabra
+        }, 3000);  // 3 segundos después de mostrar la foto
+    });
+
+    // Función para crear las palabras flotantes
+    function spamWords(word) {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        // Generar palabras flotantes aleatorias
+        for (let i = 0; i < 50; i++) {  // Número de veces que aparecerá la palabra
+            const floatingWord = document.createElement("div");
+            floatingWord.classList.add("floating-word");
+            floatingWord.innerText = word;
+
+            // Generar direcciones aleatorias para X y Y
+            const randomX = Math.random() * screenWidth * 2 - screenWidth;  // X aleatorio
+            const randomY = Math.random() * screenHeight * 2 - screenHeight;  // Y aleatorio
+            const randomDirectionX = (Math.random() < 0.5 ? -1 : 1);  // Dirección X aleatoria
+            const randomDirectionY = (Math.random() < 0.5 ? -1 : 1);  // Dirección Y aleatoria
+
+            // Establecer la dirección aleatoria para las palabras
+            floatingWord.style.setProperty('--random-x', `${randomX * randomDirectionX}px`);
+            floatingWord.style.setProperty('--random-y', `${randomY * randomDirectionY}px`);
+
+            // Agregar la palabra al body
+            document.body.appendChild(floatingWord);
+
+            // Animación para rebotar las palabras
+            moveFloatingWord(floatingWord);
+        }
+    }
+
+    // Función para mover las palabras y hacer que reboten
+    function moveFloatingWord(floatingWord) {
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        let xPos = Math.random() * screenWidth;
+        let yPos = Math.random() * screenHeight;
+        let xVel = (Math.random() - 0.5) * 2;  // Velocidad de movimiento aleatoria
+        let yVel = (Math.random() - 0.5) * 2;  // Velocidad de movimiento aleatoria
+
+        function updatePosition() {
+            xPos += xVel;
+            yPos += yVel;
+
+            // Rebotar en los bordes de la pantalla
+            if (xPos <= 0 || xPos >= screenWidth) {
+                xVel = -xVel;  // Cambiar la dirección X cuando golpea los bordes
+            }
+            if (yPos <= 0 || yPos >= screenHeight) {
+                yVel = -yVel;  // Cambiar la dirección Y cuando golpea los bordes
+            }
+
+            // Actualizar la posición de la palabra
+            floatingWord.style.left = `${xPos}px`;
+            floatingWord.style.top = `${yPos}px`;
+
+            // Llamar a la función de nuevo para animar el movimiento
+            requestAnimationFrame(updatePosition);
+        }
+
+        updatePosition();
+    }
+
+    
     // Crear el botón de "Términos y Condiciones"
     const termsContainer = document.createElement("div");
     termsContainer.classList.add("terms-container");
